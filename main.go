@@ -40,9 +40,9 @@ func contactFormHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
-	filserver := http.FileServer(http.Dir("./static"))
+	fileserver := http.FileServer(http.Dir("./static"))
 
-	http.Handle("/", filserver)
+	http.Handle("/", fileserver)
 
 	http.HandleFunc("/contact", contactFormHandler)
 
